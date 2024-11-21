@@ -5,7 +5,7 @@ import '../Utils/Const/app_images.dart';
 
 class ContactController extends GetxController{
   final List<User> users = [
-    User(name: "Waqas Akhtar", imagePath: AppImages.testImage),
+    User(name: "Waqas Akhtar abc a s sgd d ", imagePath: AppImages.testImage),
     User(name: "John Doe", imagePath: AppImages.testImage),
     User(name: "Jane Smith", imagePath: AppImages.testImage),
     User(name: "Alice Johnson", imagePath: AppImages.testImage),

@@ -74,6 +74,7 @@ class CustomContactContainer extends StatelessWidget {
             ],
           ),
           CustomTextWidget(
+            textOverflow: TextOverflow.ellipsis,
             text: name,
             fontWeight: FontWeight.w700,
             fontSize: 16,
