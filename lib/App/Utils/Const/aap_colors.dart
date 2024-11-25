@@ -15,6 +15,8 @@ class AppColors{
   static const Color redIsh= Color(0xffDD505A);
   static const Color purple2= Color(0xffb28ccc);
   static const Color purple3= Color(0xff82539D);
+  static const Color orange = Color(0xffEB996E);
+  static const Color gray = Color(0xffEFEFEF);
 
 
   static const gradientBluish = [

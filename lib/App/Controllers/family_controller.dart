@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../Model/user_model.dart';
 import '../Utils/Const/app_images.dart';
 
-class ContactController extends GetxController{
+class FamilyController extends GetxController{
   final List<User> users = [
     User(name: "John Doe", imagePath: AppImages.testImage),
     User(name: "Jane Smith", imagePath: AppImages.testImage),
@@ -15,7 +15,5 @@ class ContactController extends GetxController{
     User(name: "Chris Martin", imagePath: AppImages.testImage),
     User(name: "Jessica Clark", imagePath: AppImages.testImage),
   ];
-
-
 
 }

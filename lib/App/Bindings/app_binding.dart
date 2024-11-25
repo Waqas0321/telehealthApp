@@ -1,4 +1,10 @@
 import 'package:get/get.dart';
+import 'package:telehealth_app/App/Controllers/covid_controller.dart';
+import 'package:telehealth_app/App/Controllers/ensurance_controller.dart';
+import 'package:telehealth_app/App/Controllers/family_controller.dart';
+import 'package:telehealth_app/App/Controllers/health_summary_controller.dart';
+import 'package:telehealth_app/App/Controllers/health_summary_controller_two.dart';
+import 'package:telehealth_app/App/Controllers/reminders_controller.dart';
 
 import '../Controllers/Auth/login_controller.dart';
 import '../Controllers/change_password_controller.dart';
@@ -32,6 +38,24 @@ class InitialBinding extends Bindings{
 
     Get.lazyPut(() => ContactController(),);
     Get.put(() => ContactController(),);
+
+    Get.lazyPut(() => HealthSummaryController(),);
+    Get.put(() => HealthSummaryController(),);
+
+    Get.lazyPut(() => HealthSummaryControllerTwo(),);
+    Get.put(() => HealthSummaryControllerTwo(),);
+
+    Get.lazyPut(() => RemindersController(),);
+    Get.put(() => RemindersController(),);
+
+    Get.lazyPut(() => InsuranceController(),);
+    Get.put(() => InsuranceController(),);
+
+    Get.lazyPut(() => CovidController(),);
+    Get.put(() => CovidController(),);
+
+    Get.lazyPut(() => FamilyController(),);
+    Get.put(() => FamilyController(),);
   }
 
 }

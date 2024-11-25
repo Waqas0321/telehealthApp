@@ -12,7 +12,8 @@ class CustomButton extends StatelessWidget {
     this.textColor = AppColors.white,
     this.fontWeight = FontWeight.w600,
     this.fontSize = 28,
-    required this.onPress
+    required this.onPress,
+    this.isOrange = false
   });
   final double widthPercentage;
   final double heightPercentage;
@@ -22,6 +23,7 @@ class CustomButton extends StatelessWidget {
   final FontWeight fontWeight;
   final double fontSize;
   final VoidCallback onPress;
+  final bool isOrange;
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +34,13 @@ class CustomButton extends StatelessWidget {
         height: AppSizes().getHeightPercentage(heightPercentage),
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          gradient: const LinearGradient(
+          gradient:isOrange?null: const LinearGradient(
             colors: AppColors.gradientBluish,
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             stops: [0.1, 1.0], // Adjust gradient position
           ),
+          color: !isOrange?null:AppColors.orange,
           borderRadius: BorderRadius.circular(borderRadius), // Rounded corners
         ),
         child:  CustomTextWidget(

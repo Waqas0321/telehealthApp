@@ -101,6 +101,10 @@ class HomeController extends GetxController{
   void navigationFunction(String name){
     if(name == "Contacts"){
       Get.toNamed(AppRoutes.contactScreen);
+    }else if(name == "Health\nSummary"){
+      Get.toNamed(AppRoutes.healthSummaryScreen);
+    }else if(name == "Insurance"){
+      Get.toNamed(AppRoutes.insuranceScreen);
     }
   }
 

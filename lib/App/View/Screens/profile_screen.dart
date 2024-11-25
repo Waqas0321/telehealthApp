@@ -63,7 +63,9 @@ class ProfileScreen extends StatelessWidget {
                 const Gap(36),
                 CustomArrowButton(
                   text: "Family Access",
-                  onPress: () {},
+                  onPress: () {
+                    Get.toNamed(AppRoutes.familyScreen);
+                  },
                 ),
                 const Gap(8),
                 const CustomDivider(),
