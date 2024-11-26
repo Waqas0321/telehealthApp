@@ -40,6 +40,7 @@ class EditProfileScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+
                 Gap(AppSizes().getHeightPercentage(2)),
                 Stack(
                   children: [

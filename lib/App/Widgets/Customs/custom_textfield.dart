@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:telehealth_app/App/Utils/Const/app_images.dart';
 import '../../Utils/Const/aap_colors.dart';
 
 class CustomTextField extends StatefulWidget {
@@ -11,7 +15,9 @@ class CustomTextField extends StatefulWidget {
     this.isObsecure = false,
     this.isValidateFun = false,
     this.errorText = "Please fill this field",
-    this.suffixIcon = false,
+    this.isSuffixIcon = false,
+    this.sendIcon = true, this.sendOnPress,
+    this.prefixIcons = false, this.showEmojisPress, this.openGalleryPress, this.startRecordingPress,
   });
 
   final String hintText;
@@ -19,7 +25,13 @@ class CustomTextField extends StatefulWidget {
   final bool isObsecure;
   final bool isValidateFun;
   final String errorText;
-  final bool suffixIcon;
+  final bool isSuffixIcon;
+  final bool sendIcon;
+  final bool prefixIcons;
+  final VoidCallback? sendOnPress;
+  final VoidCallback? showEmojisPress;
+  final VoidCallback? openGalleryPress;
+  final VoidCallback? startRecordingPress;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -27,6 +39,7 @@ class CustomTextField extends StatefulWidget {
 
 class _CustomTextFieldState extends State<CustomTextField> {
   late bool _isObsecure;
+  final ImagePicker _picker = ImagePicker();
 
   @override
   void initState() {
@@ -72,8 +85,42 @@ class _CustomTextFieldState extends State<CustomTextField> {
             fontSize: 18,
             color: AppColors.black.withOpacity(0.5),
           ),
-          suffixIcon: widget.suffixIcon
-              ? GestureDetector(
+          prefixIcon:widget.prefixIcons? SizedBox(
+            width: 110,
+            child: Row(
+              children: [
+                Gap(8),
+                InkWell(
+                    onTap: widget.showEmojisPress,
+                    child: SvgPicture.asset(AppImages.emojiIcon)),
+                Gap(8),
+                InkWell(
+                    onTap: widget.openGalleryPress,
+                    child: SvgPicture.asset(AppImages.gallaryIcon)),
+                Gap(8),
+                InkWell(
+                    onTap: widget.startRecordingPress,
+                    child: SvgPicture.asset(AppImages.miceIcon)),
+
+              ],
+            ),
+          ):null,
+          suffixIcon: widget.isSuffixIcon
+              ?widget.sendIcon? GestureDetector(
+            onTap: widget.sendOnPress,
+            child: Container(
+              margin:const EdgeInsets.all(8),
+              padding: const EdgeInsets.all(12),
+              decoration:const BoxDecoration(
+                shape: BoxShape.circle,
+                color: AppColors.purple
+              ),
+              child: SvgPicture.asset(
+                AppImages.sendIcon,
+                color: AppColors.white,
+              ),
+            ),
+          ):GestureDetector(
             onTap: () {
               setState(() {
                 _isObsecure = !_isObsecure;

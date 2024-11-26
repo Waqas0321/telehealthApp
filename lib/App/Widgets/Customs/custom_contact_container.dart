@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
+import 'package:get/get.dart';
+import 'package:telehealth_app/App/AppRoutes/app_routes.dart';
 import '../../Utils/Const/aap_colors.dart';
 import '../../Utils/Const/app_images.dart';
 import 'custom_text_widget.dart';
 class CustomContactContainer extends StatelessWidget {
   const CustomContactContainer({
-    super.key, required this.name, required this.imagePath,
+    super.key, required this.name, required this.imagePath, this.radius = 52, this.fontweight = FontWeight.w700, this.fontSize = 16,
   });
   final String name;
   final String imagePath;
+  final double radius;
+  final FontWeight fontweight;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,7 @@ class CustomContactContainer extends StatelessWidget {
           Stack(
             children: [
               CircleAvatar(
-                radius: 52,
+                radius: radius,
                 backgroundImage: AssetImage(imagePath),
               ),
               Positioned(
@@ -29,6 +33,7 @@ class CustomContactContainer extends StatelessWidget {
                 child: InkWell(
                   onTap: () {
                     print(name);
+                    Get.toNamed(AppRoutes.videoCallScreen);
                   },
                   child: Container(
                     height: 30,
@@ -76,8 +81,8 @@ class CustomContactContainer extends StatelessWidget {
           CustomTextWidget(
             textOverflow: TextOverflow.ellipsis,
             text: name,
-            fontWeight: FontWeight.w700,
-            fontSize: 16,
+            fontWeight: fontweight,
+            fontSize: fontSize,
             textColor: AppColors.purple,
           )
         ],

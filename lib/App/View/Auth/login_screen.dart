@@ -63,11 +63,12 @@ class LogInScreen extends StatelessWidget {
                   ],
                 ),
                 CustomTextField(
-                  suffixIcon: true,
+                  isSuffixIcon: true,
                   controller: logInController.passwordController,
                   hintText: "*********",
                   isObsecure: true,
                   isValidateFun: true,
+                   sendIcon: false,
                 ),
                 const Gap(32),
                 CustomButton(

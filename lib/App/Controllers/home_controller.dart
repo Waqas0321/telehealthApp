@@ -106,6 +106,9 @@ class HomeController extends GetxController{
     }else if(name == "Insurance"){
       Get.toNamed(AppRoutes.insuranceScreen);
     }
+    else if(name == "Messages"){
+      Get.toNamed(AppRoutes.messagesScreen);
+    }
   }
 
 

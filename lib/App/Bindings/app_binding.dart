@@ -4,7 +4,9 @@ import 'package:telehealth_app/App/Controllers/ensurance_controller.dart';
 import 'package:telehealth_app/App/Controllers/family_controller.dart';
 import 'package:telehealth_app/App/Controllers/health_summary_controller.dart';
 import 'package:telehealth_app/App/Controllers/health_summary_controller_two.dart';
+import 'package:telehealth_app/App/Controllers/message_controller.dart';
 import 'package:telehealth_app/App/Controllers/reminders_controller.dart';
+import 'package:telehealth_app/App/Controllers/videoCall_controller.dart';
 
 import '../Controllers/Auth/login_controller.dart';
 import '../Controllers/change_password_controller.dart';
@@ -56,6 +58,12 @@ class InitialBinding extends Bindings{
 
     Get.lazyPut(() => FamilyController(),);
     Get.put(() => FamilyController(),);
+
+    Get.lazyPut(() => VideoCallController(),);
+    Get.put(() => VideoCallController(),);
+
+    Get.lazyPut(() => MessagesController(),);
+    Get.put(() => MessagesController(),);
   }
 
 }

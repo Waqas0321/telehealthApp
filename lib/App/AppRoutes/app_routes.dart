@@ -3,7 +3,9 @@ import 'package:telehealth_app/App/View/Screens/covid_screen.dart';
 import 'package:telehealth_app/App/View/Screens/family_screen.dart';
 import 'package:telehealth_app/App/View/Screens/health_summary_screen.dart';
 import 'package:telehealth_app/App/View/Screens/insurance_screen.dart';
+import 'package:telehealth_app/App/View/Screens/message_screen.dart';
 import 'package:telehealth_app/App/View/Screens/reminders_screen.dart';
+import 'package:telehealth_app/App/View/Screens/videoCall_screen.dart';
 import '../View/Auth/login_screen.dart';
 import '../View/Screens/change_password_screen.dart';
 import '../View/Screens/contact_screen.dart';
@@ -28,6 +30,8 @@ class AppRoutes {
   static String insuranceScreen = "/ensuranceScreen";
   static String covidScreen = "/covidScreen";
   static String familyScreen = "/familyScreen";
+  static String videoCallScreen = "/videoCallScreen";
+  static String messagesScreen = "/messagesScreen";
 
   static final routes = [
 
@@ -44,5 +48,7 @@ class AppRoutes {
     GetPage(name: insuranceScreen, page: () =>InsuranceScreen(),),
     GetPage(name: covidScreen, page: () =>CovidScreen(),),
     GetPage(name: familyScreen, page: () =>FamilyScreen(),),
+    GetPage(name: videoCallScreen, page: () =>VideocallScreen(),),
+    GetPage(name: messagesScreen, page: () =>MessagesScreen(),),
   ];
 }

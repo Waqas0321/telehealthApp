@@ -21,5 +21,12 @@ class AppImages{
   static const String chat = '${basePath}chat.svg';
   static const String vaccine = '${basePath}vaccine.png';
   static const String care = '${basePath}care.png';
+  static const String videoCall = '${basePath}videoCall.jpeg';
+  static const String videoCall2 = '${basePath}videoCall2.jpeg';
+  static const String sendIcon = '${basePath}send.svg';
+  static const String emojiIcon = '${basePath}emoji.svg';
+  static const String miceIcon = '${basePath}mice.svg';
+  static const String gallaryIcon = '${basePath}gallary.svg';
+  static const String testImage2 = '${basePath}test_image2.png';
 
 }

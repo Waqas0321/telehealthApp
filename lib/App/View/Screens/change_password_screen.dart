@@ -51,7 +51,8 @@ class ChangePasswordScreen extends StatelessWidget {
                   ],
                 ),
                 CustomTextField(
-                  suffixIcon: true,
+                  sendIcon: false,
+                  isSuffixIcon: true,
                   controller: changePasswordController.oldPasswordController,
                   hintText: "*********",
                   isObsecure: true,
@@ -69,7 +70,8 @@ class ChangePasswordScreen extends StatelessWidget {
                   ],
                 ),
                 CustomTextField(
-                  suffixIcon: true,
+                  sendIcon: false,
+                  isSuffixIcon: true,
                   controller: changePasswordController.newPasswordController,
                   hintText: "*********",
                   isObsecure: true,
@@ -87,7 +89,8 @@ class ChangePasswordScreen extends StatelessWidget {
                   ],
                 ),
                 CustomTextField(
-                  suffixIcon: true,
+                  isSuffixIcon: true,
+                  sendIcon: false,
                   controller:
                       changePasswordController.confirmPasswordController,
                   hintText: "*********",
