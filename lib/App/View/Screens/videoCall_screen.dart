@@ -19,7 +19,7 @@ class VideocallScreen extends StatelessWidget {
         child: Container(
           height: Get.height,
           width: Get.width,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(AppImages.videoCall2), fit: BoxFit.fill)),
           child: Stack(
@@ -33,7 +33,7 @@ class VideocallScreen extends StatelessWidget {
                     height: AppSizes().getHeightPercentage(25),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(14),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                             image: AssetImage(AppImages.videoCall),
                             fit: BoxFit.fill)),
                   )),
@@ -45,42 +45,36 @@ class VideocallScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        padding:EdgeInsets.all(8),
-                        decoration:BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: AppColors.purple
-                        ),
-                        child: Icon(
+                        padding: const EdgeInsets.all(8),
+                        decoration: const BoxDecoration(
+                            shape: BoxShape.circle, color: AppColors.purple),
+                        child: const Icon(
                           CupertinoIcons.mic,
                           color: AppColors.white,
                           size: 24,
                         ),
                       ),
-                      Gap(18),
+                      const Gap(18),
                       GestureDetector(
                         onTap: () {
                           Get.back();
                         },
                         child: Container(
-                          padding:EdgeInsets.all(24),
-                          decoration:BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: AppColors.red
-                          ),
-                          child: Icon(
+                          padding: const EdgeInsets.all(24),
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle, color: AppColors.red),
+                          child: const Icon(
                             CupertinoIcons.phone,
                             color: AppColors.white,
                           ),
                         ),
                       ),
-                      Gap(18),
+                      const Gap(18),
                       Container(
-                        padding:EdgeInsets.all(8),
-                        decoration:BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: AppColors.purple
-                        ),
-                        child: Icon(
+                        padding: const EdgeInsets.all(8),
+                        decoration: const BoxDecoration(
+                            shape: BoxShape.circle, color: AppColors.purple),
+                        child: const Icon(
                           CupertinoIcons.camera_rotate,
                           color: AppColors.white,
                           size: 24,
